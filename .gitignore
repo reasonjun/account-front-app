@@ -1,6 +1,8 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://git-scm.com/docs/gitignore for more about ignoring files.
 
-# dependencies
+# -----------------------------------------------------------------------------
+# Node.js and Dependencies
+# -----------------------------------------------------------------------------
 /node_modules
 /.pnp
 .pnp.*
@@ -9,33 +11,102 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 
-# testing
-/coverage
+# Optional npm cache directory
+.npm/
 
-# next.js
-/.next/
-/out/
+# Compiled binary addons (e.g., for native Node.js modules)
+build/Release/
 
-# production
-/build
+# Output of 'npm pack'
+*.tgz
 
-# misc
-.DS_Store
-*.pem
+# -----------------------------------------------------------------------------
+# Build Output
+# -----------------------------------------------------------------------------
+# Next.js build output
+.next/
+out/
 
-# debug
+# General build output directory
+build/
+
+# -----------------------------------------------------------------------------
+# Logs and Debugging
+# -----------------------------------------------------------------------------
+logs/
+
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+lerna-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# Node.js diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# vercel
-.vercel
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
 
-# typescript
+# Optional REPL history
+.node_repl_history
+
+# -----------------------------------------------------------------------------
+# Testing and Coverage
+# -----------------------------------------------------------------------------
+coverage/
+*.lcov
+.nyc_output/
+
+# -----------------------------------------------------------------------------
+# Environment Variables
+# -----------------------------------------------------------------------------
+# Local .env files, which should not be committed
+.env
+.env.local
+.env.*.local
+
+# -----------------------------------------------------------------------------
+# IDE Specific (WebStorm / IntelliJ)
+# -----------------------------------------------------------------------------
+.idea/
+*.iml
+# IntelliJ specific output directories
+out/
+gen/
+
+# -----------------------------------------------------------------------------
+# OS Specific
+# -----------------------------------------------------------------------------
+.DS_Store
+
+# -----------------------------------------------------------------------------
+# Deployment
+# -----------------------------------------------------------------------------
+.vercel/
+
+# -----------------------------------------------------------------------------
+# TypeScript
+# -----------------------------------------------------------------------------
 *.tsbuildinfo
 next-env.d.ts
+
+# -----------------------------------------------------------------------------
+# Caches
+# -----------------------------------------------------------------------------
+.cache/
+.eslintcache
+.stylelintcache
+
+# -----------------------------------------------------------------------------
+# Miscellaneous
+# -----------------------------------------------------------------------------
+*.pem
